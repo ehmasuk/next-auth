@@ -1,5 +1,5 @@
 const getData = async () => {
-    const res = await fetch("https://eh-next-auth.vercel.app/api/users");
+    const res = await fetch(process.env.DOMAIN + "/api/users");
     return await res.json();
 };
 
