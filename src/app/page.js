@@ -1,7 +1,4 @@
-const getData = async () => {
-    const res = await fetch(process.env.DOMAIN + "/api/users");
-    return await res.json();
-};
+import { getData } from "@/lib/gets";
 
 async function Home() {
     const data = await getData()
