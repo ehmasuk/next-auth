@@ -1,5 +1,5 @@
 const getData = async () => {
-    const res = await fetch(process.env.DOMAIN + "/api/users");
+    const res = await fetch("http://localhost:3000/api/users");
     return await res.json();
 };
 
