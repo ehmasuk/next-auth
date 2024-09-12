@@ -1,7 +1,10 @@
-import { getData } from "@/lib/gets";
+export const getData = async () => {
+    const res = await fetch(process.env.DOMAIN + "/api/users");
+    return await res.json();
+};
 
 async function Home() {
-    const data = await getData()
+    const data = process.env.DOMAIN && await getData()
 
     return <div>
         <ul className="space-y-2 p-10">
